@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .result-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    .result-form input {
+      margin: 5px 0;
+      padding: 10px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .result-form button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .result-form button:hover {
+      background-color: #0056b3;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bakalia Govt. College</h1>
+    <div class="container">
+      <h1>Pre Test Result
+    <div class="result-form"> <input type="text" id="name" placeholder="Enter your name"> <input type="text" id="className" placeholder="Enter your class name"> <input type="text" id="rollNo" placeholder="Enter your roll number"> <input type="text" id="regNo" placeholder="Enter your registration number"> <button onclick="showError()">Show Result</button> </div>
+    <div id="error-message" class="error"></div>
+  </div>
+  <script>
+    function showError() {
+      document.getElementById('error-message').textContent = "Server Error: Result not found!"; } 
+  </script>
+</body>
+
+</html>
